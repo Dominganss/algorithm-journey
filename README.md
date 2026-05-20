@@ -33,3 +33,9 @@ def sliding_window_max(nums: List[int], k: int) -> int:
             state -= nums[left]
             left += 1
     return len(nums) - left
+
+### 2. 利用while循环寻找临界窗口
+利用while循环缩小左窗口来寻找从满足到不满足的临界情况，从而确定不同右指针下满足条件的最小窗口。例：1358 2799
+while satisfied_the_condition:
+    windows_state -= nums[left]
+    left += 1
