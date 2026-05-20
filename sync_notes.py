@@ -30,7 +30,7 @@ def extract_and_sync():
                 match = re.search(r'"""@THOUGHTS(.*?)"""', content, re.DOTALL)
                 if match:
                     thoughts = match.group(1).strip()
-                    compiled_notes += f"## 🔗 来源文件：`{filename}`\n"
+                    compiled_notes += f"##  来源文件：`{filename}`\n"
                     compiled_notes += f"{thoughts}\n\n---\n\n"
                     
         # 将提取到的笔记写入专门的 Markdown 文件
